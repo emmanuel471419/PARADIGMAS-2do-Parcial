@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Información de Empleado</title>
+</head>
+<body>
+    <h1>Información de Empleado</h1>
+    <ul>
+        <li><strong>Nombre:</strong> <span th:text="${empleado.nombre}"></span></li>
+        <li><strong>Apellido:</strong> <span th:text="${empleado.apellido}"></span></li>
+        <li><strong>Dirección:</strong> <span th:text="${empleado.direccion}"></span></li>
+        <li><strong>Puesto:</strong> <span th:text="${empleado.puesto}"></span></li>
+        <li><strong>Edad:</strong> <span th:text="${empleado.edad}"></span></li>
+        <li><strong>Teléfono:</strong> <span th:text="${empleado.telefono}"></span></li>
+        <li><strong>ID:</strong> <span th:text="${empleado.id}"></span></li>
+    </ul>
+</body>
+</html>
