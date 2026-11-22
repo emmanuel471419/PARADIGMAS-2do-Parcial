@@ -13,7 +13,7 @@ public class EstudianteDAOMySQL implements DAO<Estudiante> {
     public void guardar(Estudiante est) {
         String sql = "INSERT INTO estudiantes (id, nombre) VALUES (?, ?)";
         try (Connection con = DriverManager.getConnection(URL, USER, PASS);
-             PreparedStatement pstat = con.prepareStatement(sql)) {
+        PreparedStatement pstat = con.prepareStatement(sql)) {
             pstat.setInt(1, est.getId());
             pstat.setString(2, est.getNombre());
             pstat.executeUpdate();
@@ -28,8 +28,8 @@ public class EstudianteDAOMySQL implements DAO<Estudiante> {
         List<Estudiante> lista = new ArrayList<>();
         String sql = "SELECT id, nombre FROM estudiantes";
         try (Connection con = DriverManager.getConnection(URL, USER, PASS);
-             PreparedStatement pstat = con.prepareStatement(sql);
-             ResultSet rs = pstat.executeQuery()) {
+        PreparedStatement pstat = con.prepareStatement(sql); 
+        ResultSet rs = pstat.executeQuery()) {
             while (rs.next()) {
                 lista.add(new Estudiante(rs.getInt("id"), rs.getString("nombre")));
             }

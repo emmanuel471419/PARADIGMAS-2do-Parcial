@@ -26,4 +26,4 @@ public class Ejemploiterator {
         // 4. Verificar los elementos restantes
         System.out.println("Materias restantes: " + materias);
     }
-}   
+}
